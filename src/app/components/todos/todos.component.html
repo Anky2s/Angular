@@ -1,4 +1,5 @@
 <div class="todos">
+  // Yazilan fonksiyonlarin eventler yardimiyla cagrildigi kisim 
 	<form (submit)="addTodo()">
 		<input 
 			type="text"
@@ -9,6 +10,7 @@
 		/>
 		<input type="submit" value="Add Todo" class="todo-submit" />
 	</form>
+  
 	<div *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.completed ? 'done' : '') }}">
 		<div class="id">{{ i }}</div>
 		<div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
